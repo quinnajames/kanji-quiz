@@ -3,6 +3,9 @@ $(document).ready(function(){
 	var kanjiQuiz_chars = ["開","東","明","物", "答", "頭", "同", "道", "読", "内"];
 	var kanjiQuiz_english = ["open", "east", "bright", "thing", "solution",
 "head", "same", "roadway", "read", "inside"];
+
+// TODO
+// (not 鯔)
   var kanjiQuiz_vocab = [
     ["開放", "かいほう", "kaihou", "open; throw open; liberalization"],
 ["東", "ひがし", "higashi", "east"],
@@ -15,21 +18,17 @@ $(document).ready(function(){
 ];
 
   var arraySize = kanjiQuiz_chars.length;
-	// var kanjiQuiz = {characters: ["開","東","明","物"], english: ["open", "east", "bright", "thing"]};
   var quizQuestionOrder = 1;
 
   function changeKanji(order) {
     $("#kanjiShow").text(kanjiQuiz_chars[order]);
     quizQuestionOrder = order;
-  	//console.log(order);
   }
   changeKanji(quizQuestionOrder);
 
 	$("#english").keypress(function(e) {
-    //console.log('keypress');
 			if (e.which == 13) {
 
-        //console.log("on keypress, qQO = " + quizQuestionOrder);
         var englishEntered = $('#english').val();
 
         var englishAnswer = kanjiQuiz_english[quizQuestionOrder];
@@ -46,7 +45,6 @@ $(document).ready(function(){
 
         $('#english').val('');
 
-      // return false;
 		}
 	});
 
