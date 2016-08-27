@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+  // Want to factor this part out
+	$("#kanjiShow").addClass("font-sans");
+
 	var kanjiQuiz_chars = ["開","東","明","物", "答", "頭", "同", "道", "読", "内"];
 	var kanjiQuiz_english = ["open", "east", "bright", "thing", "solution",
 "head", "same", "roadway", "read", "inside"];
@@ -25,6 +28,21 @@ $(document).ready(function(){
     quizQuestionOrder = order;
   }
   changeKanji(quizQuestionOrder);
+
+
+	function changeKanjiFont() {
+		if ($("#kanjiShow").hasClass("font-sans")) {
+			$("#kanjiShow").removeClass("font-sans");
+			$("#kanjiShow").addClass("font-serif");
+		}
+		else {
+			$("#kanjiShow").removeClass("font-serif");
+			$("#kanjiShow").addClass("font-sans");
+		}
+	}
+  $("#font-toggle").click(function() {
+	  changeKanjiFont();
+	})
 
 	$("#english").keypress(function(e) {
 			if (e.which == 13) {

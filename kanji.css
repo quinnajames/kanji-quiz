@@ -19,16 +19,23 @@ body {
 }
 
 .kanji {
-  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	font-size:10em;
 }
-#font-sans {
-  font: sans-serif;
-}
-#font-serif {
-  font: sans-serif;
-}
 
+.if-button {
+  background-color: #333;
+  color: #efeff0;
+  display: inline-block;
+  font-size: 1.5em;
+  padding: 20px;
+
+}
+.font-sans {
+  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+.font-serif {
+  font-family: serif;
+}
 
 .answerShow
 {
