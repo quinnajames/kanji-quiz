@@ -9,16 +9,7 @@ $(document).ready(function(){
 
 // TODO
 // (not 鯔)
-  var kanjiQuiz_vocab = [
-    ["開放", "かいほう", "kaihou", "open; throw open; liberalization"],
-["東", "ひがし", "higashi", "east"],
-["明るい", "あか", "akarui", "bright"],
-["物", "ぶつ", "butsu [ON reading]", "stock; products"],
-["答え", "こたえ", "kotau", "answer; reply; response; solution"],
-["同じ", "おなじ", "onaji", "same; identical; equal; uniform; similar; common (origin); changeless; alike"],
-["", "", "", ""],
-["", "", "", ""],
-];
+
 
   var arraySize = kanjiQuiz_chars.length;
   var quizQuestionOrder = 1;
