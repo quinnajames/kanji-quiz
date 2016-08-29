@@ -3,9 +3,16 @@ $(document).ready(function(){
   // Want to factor this part out
 	$("#kanjiShow").addClass("font-sans");
 
-	var kanjiQuiz_chars = ["開","東","明","物", "答", "頭", "同", "道", "読", "内"];
+	var kanjiQuiz_chars = ["開","東","明","物", "答",
+	"頭", "同", "道", "読", "内",
+	"米", "来", "半", "橋", "館",
+	"階", "指", "湖", "期", "朝",
+	"早", "草", "苦", "幸", "業"];
 	var kanjiQuiz_english = ["open", "east", "bright", "thing", "solution",
-"head", "same", "roadway", "read", "inside"];
+"head", "same", "roadway", "read", "inside",
+"rice", "come", "half", "bridge", "large building",
+"storey", "finger", "lake", "period", "morning",
+"early", "grass", "suffering", "happiness", "profession"];
 
 // TODO
 // (not 鯔)
