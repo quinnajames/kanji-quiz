@@ -52,7 +52,13 @@ $(document).ready(function(){
         var englishAnswer = kanjiQuiz_english[quizQuestionOrder];
         if (englishEntered === englishAnswer)
         {
-            changeKanji(Math.floor((Math.random() * kanjiQuiz_chars.length) + 0));
+					 var newQuestionOrder = Math.floor((Math.random() * kanjiQuiz_chars.length) + 0);
+					 console.log(newQuestionOrder + " " + quizQuestionOrder);
+					 while (newQuestionOrder === quizQuestionOrder)
+					 {
+						 newQuestionOrder = Math.floor((Math.random() * kanjiQuiz_chars.length) + 0);
+					 }
+            changeKanji(newQuestionOrder);
   			     $("#kanjiContainer").css("background-color", "green");
              $("#answerShow").html('YES, this is <b>' + englishAnswer + '</b>');
         }
