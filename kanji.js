@@ -50,10 +50,10 @@ $(document).ready(function(){
         var englishAnswer = kanjiQuiz_english[quizQuestionOrder];
         if (englishEntered === englishAnswer)
         {
-					 var newQuestionOrder = Math.floor((Math.random() * kanjiQuiz_chars.length) + 0);
+					 var newQuestionOrder = Math.floor((Math.random() * arraySize) + 0);
 					 while (newQuestionOrder === quizQuestionOrder)
 					 {
-						 newQuestionOrder = Math.floor((Math.random() * kanjiQuiz_chars.length) + 0);
+						 newQuestionOrder = Math.floor((Math.random() * arraySize) + 0);
 					 }
             changeKanji(newQuestionOrder);
   			     $("#kanjiContainer").css("background-color", "green");
