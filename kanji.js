@@ -53,7 +53,6 @@ $(document).ready(function(){
         if (englishEntered === englishAnswer)
         {
 					 var newQuestionOrder = Math.floor((Math.random() * kanjiQuiz_chars.length) + 0);
-					 console.log(newQuestionOrder + " " + quizQuestionOrder);
 					 while (newQuestionOrder === quizQuestionOrder)
 					 {
 						 newQuestionOrder = Math.floor((Math.random() * kanjiQuiz_chars.length) + 0);
