@@ -45,33 +45,38 @@ function swapClassesOnId(id, oldClass, newClass) {
 	  changeKanjiFont();
 	})
 
+	function doSubmit() {
+		var englishEntered = $('#english').val();
+
+		var englishAnswer = kanjiQuiz_english[quizQuestionOrder];
+		if (englishEntered === englishAnswer)
+		{
+			 var newQuestionOrder = Math.floor((Math.random() * arraySize) + 0);
+			 while (newQuestionOrder === quizQuestionOrder)
+			 {
+				 newQuestionOrder = Math.floor((Math.random() * arraySize) + 0);
+			 }
+				changeKanji(newQuestionOrder);
+				 $("#kanjiContainer").css("background-color", "green");
+				 $("#answerShow").html('YES, this is <b>' + englishAnswer + '</b>');
+		}
+		else {
+			$("#kanjiContainer").css("background-color", "red");
+			$("#answerShow").html('NO, actually, this is <b>' + englishAnswer + '</b>');
+		}
+
+		$('#english').val('');
+
+	}
+
 	$("#english").keypress(function(e) {
 			if (e.which == 13) {
-
-        var englishEntered = $('#english').val();
-
-        var englishAnswer = kanjiQuiz_english[quizQuestionOrder];
-        if (englishEntered === englishAnswer)
-        {
-					 var newQuestionOrder = Math.floor((Math.random() * arraySize) + 0);
-					 while (newQuestionOrder === quizQuestionOrder)
-					 {
-						 newQuestionOrder = Math.floor((Math.random() * arraySize) + 0);
-					 }
-            changeKanji(newQuestionOrder);
-  			     $("#kanjiContainer").css("background-color", "green");
-             $("#answerShow").html('YES, this is <b>' + englishAnswer + '</b>');
-        }
-        else {
-          $("#kanjiContainer").css("background-color", "red");
-          $("#answerShow").html('NO, actually, this is <b>' + englishAnswer + '</b>');
-        }
-
-        $('#english').val('');
-
+    		doSubmit();
 		}
 	});
 
-
+	$("#englishInput").click(function(e) {
+		doSubmit();
+	});
 
 });
