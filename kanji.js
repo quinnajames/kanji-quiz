@@ -27,15 +27,18 @@ $(document).ready(function(){
   }
   changeKanji(quizQuestionOrder);
 
+　// utility function
+function swapClassesOnId(id, oldClass, newClass) {
+	id.removeClass(oldClass);
+	id.addClass(newClass);
+}
 
 	function changeKanjiFont() {
 		if ($("#kanjiShow").hasClass("font-sans")) {
-			$("#kanjiShow").removeClass("font-sans");
-			$("#kanjiShow").addClass("font-serif");
+			swapClassesOnId($("#kanjiShow"),"font-sans", "font-serif");
 		}
 		else {
-			$("#kanjiShow").removeClass("font-serif");
-			$("#kanjiShow").addClass("font-sans");
+			swapClassesOnId($("#kanjiShow"),"font-serif", "font-sans");
 		}
 	}
   $("#font-toggle").click(function() {
