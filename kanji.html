@@ -26,10 +26,35 @@
 	<div class="jumbotron text-center kanji font-sans" id="kanjiContainer">
 		<span id="kanjiShow">開</span>
 	</div>
-	<div class="text-center">
-		Enter <b>English:</b> <input type="text" id="english" />
-		<input type="button" id="englishInput" value="OK" />
-	</div>
+
+
+  <ul class="tab">
+    <li><a href="#" class="tablinks" onclick="openTab(event, 'englishTab')">English</a></li>
+    <li><a href="#" class="tablinks" onclick="openTab(event, 'onTab')">On</a></li>
+    <li><a href="#" class="tablinks" onclick="openTab(event, 'kunTab')">Kun</a></li>
+  </ul>
+
+  <div id="englishTab" class="tabcontent">
+    <div class="text-center">
+  		Enter <b>English:</b> <input type="text" id="english" />
+  		<input type="button" id="englishInput" value="OK" />
+  	</div>
+  </div>
+
+  <div id="onTab" class="tabcontent">
+    <div class="text-center">
+      Enter <b>On reading:</b> <input type="text" id="on" />
+      <input type="button" id="onInput" value="OK" />
+    </div>
+  </div>
+
+  <div id="kunTab" class="tabcontent">
+    <div class="text-center">
+      Enter <b>Kun reading:</b> <input type="text" id="kun" />
+		  <input type="button" id="kunInput" value="OK" />
+    </div>
+  </div>
+
         <p id="footer">Written and coded by <a href="http://www.volucris.space">Quinn James</a>.
 
       </div>
