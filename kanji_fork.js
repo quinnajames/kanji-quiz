@@ -14,6 +14,7 @@ $(document).ready(function(){
 "storey", "finger", "lake", "period", "morning",
 "early", "grass", "suffering", "happiness", "profession"];
 
+
 // Refactoring data structure
 
 var kanjiQuiz = [{char:"開", english:"open", on:"BUN", kun:"ki", number:64},
@@ -28,7 +29,7 @@ var kanjiQuiz = [{char:"開", english:"open", on:"BUN", kun:"ki", number:64},
   var quizQuestionOrder = 1;
 
   function changeKanji(order) {
-    $("#kanjiShow").text(kanjiQuiz[order].char);
+    $("#kanjiShow").text(kanjiQuiz_chars[order]);
     quizQuestionOrder = order;
   }
   changeKanji(quizQuestionOrder);
@@ -52,8 +53,10 @@ function swapClassesOnId(id, oldClass, newClass) {
 	})
 
 	function doSubmit() {
-
 		var englishEntered = $('#english').val();
+
+		//console.log(kanjiQuiz[quizQuestionOrder].english);
+		//console.log(kanjiQuiz[quizQuestionOrder])
 		var englishAnswer = kanjiQuiz[quizQuestionOrder].english;
 		if (englishEntered === englishAnswer)
 		{
@@ -85,26 +88,4 @@ function swapClassesOnId(id, oldClass, newClass) {
 		doSubmit();
 	});
 
-
-
-
-
-
 });
-
-// Function for tab display based on a tutorial by W3S - http://www.w3schools.com/howto/howto_js_tabs.asp
-	function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
