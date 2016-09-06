@@ -79,7 +79,17 @@ function swapClassesOnId(id, oldClass, newClass) {
 		doSubmit();
 	});
 
-
+	$("#infobox-toggle").click(function(e) {
+		console.log($("#infobox"))
+		console.log($("#infobox").css("display"));
+		if ( $("#infobox").css("display") === "none" )
+		{
+			$("#infobox").css("display", "block");
+		}
+		else {
+			$("#infobox").css("display", "none");
+		}
+	});
 
 
 
@@ -99,6 +109,6 @@ function swapClassesOnId(id, oldClass, newClass) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 
-    document.getElementById(tabName).style.display = "block";
+    document.getElementById(tabName).style.display = "inline-block";
     evt.currentTarget.className += " active";
 }
