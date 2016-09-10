@@ -14,12 +14,24 @@ $(document).ready(function(){
 "storey", "finger", "lake", "period", "morning",
 "early", "grass", "suffering", "happiness", "profession"];
 
-// TODO
-// (not 鯔)
+var kanjiQuiz = [
+	{char:"開",id:"",english:"open",onreadings:"",kunreadings:"", vocabkanji:"", vocabromaji:"", vocabtrans:""},
+	{char:"東",id:"71",english:"east",onreadings:"TOU",kunreadings:"higashi", vocabkanji:"東方", vocabromaji:"touhou", vocabtrans:"eastward; the east"},
+	{char:"明",id:"",english:"bright",onreadings:"",kunreadings:"", vocabkanji:"", vocabromaji:"", vocabtrans:""},
+	{char:"物",id:"",english:"thing",onreadings:"",kunreadings:"", vocabkanji:"", vocabromaji:"", vocabtrans:""},
+	{char:"答",id:"",english:"solution",onreadings:"",kunreadings:"", vocabkanji:"", vocabromaji:"", vocabtrans:""},
+];
 
 
   var arraySize = kanjiQuiz_chars.length;
   var quizQuestionOrder = 1;
+	fillInfobox(kanjiQuiz[quizQuestionOrder]);
+
+	function fillInfobox(qqo) {
+		$("#onReadings").html(qqo.onreadings);
+		$("#kunReadings").html(qqo.kunreadings);
+		$("#vocabulary").html(qqo.vocabkanji + " " + qqo.vocabromaji + " " + qqo.vocabtrans);
+	}
 
   function changeKanji(order) {
     $("#kanjiShow").text(kanjiQuiz_chars[order]);
@@ -85,6 +97,7 @@ function swapClassesOnId(id, oldClass, newClass) {
 		if ( $("#infobox").css("display") === "none" )
 		{
 			$("#infobox").css("display", "block");
+
 		}
 		else {
 			$("#infobox").css("display", "none");
