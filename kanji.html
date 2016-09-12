@@ -17,7 +17,15 @@
     <div class="container-fluid">
 
       <div class="col-md-4 col-md-offset-4 well">
-        <div class="if-button" id="font-toggle">Toggle Font</div>
+        <div class="if-button" id="font-toggle">Change Font</div>
+        <div class="if-button" id="infobox-toggle">Show/Hide Infobox</div>
+          <div id="infobox" class="infobox">
+            <div class="text-center">
+              <p>On readings: <span id="onReadings"></span></p>
+              <p>Kun readings: <span id="kunReadings"></span></p>
+              <p>Vocabulary: <span id="vocabulary"></span></p>
+            </div>
+          </div>
         <div class="text-center">
           <h1>Kanji Quiz</h1>
         </div>
@@ -36,7 +44,7 @@
 
   <div id="englishTab" class="tabcontent">
     <div class="text-center">
-  		Enter <b>English:</b> <input type="text" id="english" />
+  		Enter <b>English:</b> <input type="text" id="english" autofocus />
   		<input type="button" id="englishInput" value="OK" />
   	</div>
   </div>
